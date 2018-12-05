@@ -35,10 +35,17 @@ getCount(): It returns the number of pages.
 The basic code used for Methods is:
 
 @Override
-        public Fragment getItem(int position) {
-            return new ScreenSlidePageFragment();
-        }
-      @Override
-        public int getCount() {
-            return NUM_PAGES;
-        }
+
+   public Fragment getItem(int position) {
+        
+   retun new ScreenSlidePageFragment();
+   
+   }
+   
+   @Override
+   
+   public int getCount() {
+   
+   return NUM_PAGES;
+   
+   }
