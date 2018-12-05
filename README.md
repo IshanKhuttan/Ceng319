@@ -7,6 +7,7 @@ The viewpager is the widget that helps us or allows the user to swipe right or l
 3. A custom  FragmentPagerAdapter that returns the correct Fragment for each page number
 
  For implementing gestural navigation we need three components to work without fragments:
+ 
 1.Viewpager => It is layout manager that displays the collection of views one at a time. It helps to detect the user swipe gesture nad navigate to left and right. 
 
 2.Adapter => Adapter helps the Viewpager to pull the data from the adapter. It's jobs is to create the view that are displayed by the Viewpager. As the Viewpager dtects the gesture of user swipe, it will ask the adapter to give the right view to display.
@@ -25,6 +26,19 @@ After synchronize the project in android studio, it will be ready to use classes
 
 ## Classes and Methods
 Viewpager requires classes and methods to work properly. For classes we have to create a fragment class  DcreenSlidePageFragment then it returns the layout by overriding on CreateView() method. And by creating inner classScreenSlidePageAdapter which extends FragmentStatePagerAdapterin the MainActivity. 
+
 For Methods:
+
 getItem(): It returns the instance of a fragment as new pager.
 getCount(): It returns the number of pages.
+
+The basic code used for Methods is:
+
+@Override
+        public Fragment getItem(int position) {
+            return new ScreenSlidePageFragment();
+        }
+      @Override
+        public int getCount() {
+            return NUM_PAGES;
+        }
