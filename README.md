@@ -17,7 +17,7 @@ The viewpager is the widget that helps us or allows the user to swipe right or l
 
 
 
-## History
+## History And Package
 
 Viewpager was introduced by google in Android 4.0 and it was added to android.support.v4libraries and Fragment was introdduced in Android 3.0 (API level 11). Viewpager is mostly used with fragments. In the case of ViewPager we cannot avoid the using of the support library because ViewPager is not firstly supported even in the latest Android , Lollipop. Also as the support library does not work properly with Fragments, in order to solve that we have to use the support library Fragment services. And for making the support library to work we have to navigate the project structure to Gradle Scripts and open the file build.gradle(app). And at the end of the file we have to include a line to dependencies(compile "com.android.support:support-v4:21.0.+"). Furthermore we can change the 21.0 to any version we want to use. And the "+" at the last will make sure that we will use the most up to date subversion. The end of file will look something like this:
 dependencies {
@@ -52,3 +52,14 @@ The basic code used for Methods is:
    return NUM_PAGES;
    
    }
+
+## References
+1. https://developer.android.com/reference/android/support/v4/view/ViewPager 
+
+2. https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/view-pager/
+
+3. https://stackoverflow.com/questions/18413309/how-to-implement-a-viewpager-with-different-fragments-layouts
+
+4. https://medium.com/@elifbon/fragments-on-viewpager-8ace8430a8e1
+
+5. https://www.bignerdranch.com/blog/viewpager-without-fragments/
